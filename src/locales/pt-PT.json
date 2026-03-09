@@ -1,0 +1,36 @@
+{
+  "home": {
+    "title": "Bubadeira",
+    "subtitle": "Jogos de bebida",
+    "players": "{min} - {max} jogadores"
+  },
+  "lobby": {
+    "title": "Jogadores",
+    "back": "Voltar",
+    "addPlayer": "Adicionar",
+    "removePlayer": "Remover",
+    "playerNamePlaceholder": "Nome do jogador",
+    "startGame": "Começar!",
+    "noPlayers": "Adiciona jogadores para começar",
+    "errorTooLong": "Nome demasiado longo (máx. 15 caracteres)",
+    "errorDuplicate": "Este jogador já existe!"
+  },
+  "game": {
+    "yourTurn": "É a tua vez",
+    "ready": "Estou Pronto!",
+    "quit": "Sair do jogo",
+    "streak": "Sequência",
+    "higher": "Maior",
+    "lower": "Menor",
+    "lost": "Perdeste!",
+    "drink": "Bebe",
+    "sips": "Golos",
+    "next": "Próximo jogador →"
+  },
+  "games": {
+    "higherOrLower": {
+      "name": "Maior ou Menor",
+      "description": "Adivinha se a próxima carta é maior ou menor. Erra e bebe!"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "home": {
+    "title": "Bubadeira",
+    "subtitle": "Tasca games",
+    "players": "{min} - {max} players"
+  },
+  "lobby": {
+    "title": "Players",
+    "back": "Back",
+    "addPlayer": "Add",
+    "removePlayer": "Remove",
+    "playerNamePlaceholder": "Player name",
+    "startGame": "Let's go!",
+    "noPlayers": "Add players to start",
+    "errorTooLong": "Name too long (max 15 characters)",
+    "errorDuplicate": "Player already exists!"
+  },
+  "game": {
+    "yourTurn": "Your turn",
+    "ready": "I'm Ready!",
+    "quit": "Quit game",
+    "streak": "Streak",
+    "higher": "Higher",
+    "lower": "Lower",
+    "lost": "You lost!",
+    "drink": "Drink",
+    "sips": "Sips",
+    "next": "Next player →"
+  },
+  "games": {
+    "higherOrLower": {
+      "name": "Higher or Lower",
+      "description": "Guess if the next card is higher or lower. Get it wrong and drink!"
+    }
+  }
+}
