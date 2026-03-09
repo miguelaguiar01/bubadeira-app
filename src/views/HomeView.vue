@@ -1,30 +1,43 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { games } from '@/data/games'
+
 import type { Game } from '@/types'
+
 import TascaBorder from '@/components/TascaBorder.vue'
 import GameCard from '@/components/GameCard.vue'
+import SettingsButton from '@/components/SettingsButton.vue'
+import SettingsPanel from "@/components/SettingsPanel.vue";
 
 const router = useRouter()
 const { t } = useI18n()
+const settingsOpen = ref(false)
 
 function selectGame(game: Game) {
   router.push({ name: 'lobby', query: { game: game.id } })
 }
+
+function openSettings() {
+  settingsOpen.value = true
+}
 </script>
 
 <template>
-  <div class="relative min-h-screen paper-texture overflow-hidden flex flex-col">
+  <div class="relative min-h-screen paper-texture dark:bg-tasca-dark overflow-hidden flex flex-col">
     <TascaBorder position="top" />
 
     <!-- Main content -->
     <div class="flex-1 flex flex-col items-center px-6 py-10 w-full">
+      <div class="w-full flex justify-end mb-4">
+        <SettingsButton @open="openSettings" />
+      </div>
 
       <!-- Hero header - full width centered -->
       <div class="text-center w-full animate-fade-up animate-fade-up-delay-1">
         <h1
-          class="font-display text-tasca-dark stamp-text font-black leading-none"
+          class="font-display text-tasca-dark dark:text-tasca-cream stamp-text font-black leading-none"
           style="font-size: clamp(3.5rem, 18vw, 6rem)"
         >
           Bubadeira
@@ -73,6 +86,8 @@ function selectGame(game: Game) {
 
       </div>
     </div>
+
+    <SettingsPanel :open="settingsOpen" @close="settingsOpen = false" />
 
     <TascaBorder position="bottom" />
   </div>
