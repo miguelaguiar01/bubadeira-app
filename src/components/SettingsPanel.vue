@@ -23,23 +23,23 @@ defineEmits<{
     />
   </Transition>
 
-  <!-- Modal wrapper — clicks outside close it -->
+  <!-- Modal wrapper -->
   <Transition name="scale-up">
     <div
       v-if="open"
       class="fixed inset-0 z-50 flex items-center justify-center px-6"
       @click.self="$emit('close')"
     >
-      <div class="w-full max-w-sm bg-tasca-paper rounded-2xl shadow-2xl border-2 border-tasca-dark/10">
+      <div class="w-full max-w-sm bg-tasca-paper dark:bg-tasca-wood-light rounded-2xl shadow-2xl border-2 border-tasca-dark/10 dark:border-tasca-cream/10">
 
         <!-- Title -->
-        <div class="px-6 pt-6 pb-4 border-b border-tasca-dark/10 flex items-center justify-between">
-          <h2 class="font-display text-tasca-dark font-black text-xl stamp-text">
+        <div class="px-6 pt-6 pb-4 border-b border-tasca-dark/10 dark:border-tasca-cream/10 flex items-center justify-between">
+          <h2 class="font-display text-tasca-dark dark:text-tasca-cream font-black text-xl stamp-text">
             {{ t('settings.title') }}
           </h2>
           <button
             @click="$emit('close')"
-            class="text-tasca-dark/30 text-2xl leading-none active:text-tasca-red transition-colors"
+            class="text-tasca-dark/30 dark:text-tasca-cream/30 text-2xl leading-none active:text-tasca-red transition-colors"
           >
             ×
           </button>
@@ -50,7 +50,7 @@ defineEmits<{
 
           <!-- Dark mode -->
           <div class="flex items-center justify-between">
-            <p class="font-body text-tasca-dark font-semibold text-sm">
+            <p class="font-body text-tasca-dark dark:text-tasca-cream font-semibold text-sm">
               {{ t('settings.darkMode') }}
             </p>
             <button
@@ -67,7 +67,7 @@ defineEmits<{
 
           <!-- Language -->
           <div class="flex items-center justify-between">
-            <p class="font-body text-tasca-dark font-semibold text-sm">
+            <p class="font-body text-tasca-dark dark:text-tasca-cream font-semibold text-sm">
               {{ t('settings.language') }}
             </p>
             <div class="flex gap-2">
@@ -75,8 +75,8 @@ defineEmits<{
                 @click="settings.setLocale('pt-PT')"
                 class="px-3 py-1.5 rounded-lg font-body text-sm font-semibold transition-colors"
                 :class="settings.locale === 'pt-PT'
-                  ? 'bg-tasca-dark text-tasca-cream'
-                  : 'bg-tasca-dark/10 text-tasca-dark'"
+                  ? 'bg-tasca-dark dark:bg-tasca-cream text-tasca-cream dark:text-tasca-dark'
+                  : 'bg-tasca-dark/10 dark:bg-tasca-cream/10 text-tasca-dark dark:text-tasca-cream'"
               >
                 PT
               </button>
@@ -84,8 +84,8 @@ defineEmits<{
                 @click="settings.setLocale('en')"
                 class="px-3 py-1.5 rounded-lg font-body text-sm font-semibold transition-colors"
                 :class="settings.locale === 'en'
-                  ? 'bg-tasca-dark text-tasca-cream'
-                  : 'bg-tasca-dark/10 text-tasca-dark'"
+                  ? 'bg-tasca-dark dark:bg-tasca-cream text-tasca-cream dark:text-tasca-dark'
+                  : 'bg-tasca-dark/10 dark:bg-tasca-cream/10 text-tasca-dark dark:text-tasca-cream'"
               >
                 EN
               </button>

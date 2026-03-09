@@ -18,16 +18,17 @@ const { t } = useI18n()
   <button
     @click="$emit('select', game)"
     class="w-full text-left overflow-hidden rounded-lg shadow-xl
-           active:scale-95 transition-transform duration-150 border-2 border-tasca-dark"
+         active:scale-95 transition-transform duration-150
+         border-2 border-tasca-dark dark:border-tasca-cream/20"
   >
     <CheckeredStripe />
-    <div class="bg-white/80 px-5 py-4 border-t-2 border-tasca-dark">
+    <div class="bg-white/80 dark:bg-tasca-parchment px-5 py-4 border-t-2 border-tasca-dark dark:border-tasca-cream/20">
       <div class="flex items-start justify-between">
         <div class="flex-1">
-          <h2 class="font-display text-tasca-dark text-2xl font-bold leading-tight stamp-text">
+          <h2 class="font-display text-tasca-dark dark:text-tasca-dark text-2xl font-bold leading-tight stamp-text">
             {{ t(game.nameKey) }}
           </h2>
-          <p class="font-body text-tasca-dark/60 text-sm mt-1 leading-relaxed">
+          <p class="font-body text-tasca-dark/60 dark:text-tasca-dark/60 text-sm mt-1 leading-relaxed">
             {{ t(game.descriptionKey) }}
           </p>
         </div>
@@ -36,11 +37,11 @@ const { t } = useI18n()
           <polygon points="20,42 36,26 28,26 28,22 12,22 12,26 4,26" fill="#c8392b" />
         </svg>
       </div>
-      <div class="flex items-center justify-between mt-4 pt-3 border-t border-tasca-dark/10">
+      <div class="flex items-center justify-between mt-4 pt-3 border-t border-tasca-dark/10 dark:border-tasca-cream/10">
         <p class="font-body text-tasca-red text-xs font-semibold tracking-wide uppercase">
           {{ t('home.players', { min: game.minPlayers, max: game.maxPlayers }) }}
         </p>
-        <span class="font-display text-tasca-dark font-bold text-lg">→</span>
+        <span class="font-display text-tasca-dark dark:text-tasca-dark font-bold text-lg">→</span>
       </div>
     </div>
   </button>

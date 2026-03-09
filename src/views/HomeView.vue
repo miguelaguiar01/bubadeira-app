@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { games } from '@/data/games'
+import { useSettingsStore } from '@/stores/settings'
 
 import type { Game } from '@/types'
 
@@ -14,6 +15,7 @@ import SettingsPanel from "@/components/SettingsPanel.vue";
 const router = useRouter()
 const { t } = useI18n()
 const settingsOpen = ref(false)
+const settings = useSettingsStore()
 
 function selectGame(game: Game) {
   router.push({ name: 'lobby', query: { game: game.id } })
@@ -25,7 +27,7 @@ function openSettings() {
 </script>
 
 <template>
-  <div class="relative min-h-screen paper-texture dark:bg-tasca-dark overflow-hidden flex flex-col">
+  <div class="relative min-h-screen paper-texture overflow-hidden flex flex-col">
     <TascaBorder position="top" />
 
     <!-- Main content -->
@@ -59,7 +61,7 @@ function openSettings() {
           <svg width="240" height="80" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="azulejo" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                <rect width="40" height="40" fill="#f0ede6" stroke="#2c5f8a" stroke-width="1.5" />
+                <rect width="40" height="40" :fill="settings.darkMode ? '#2a1a0e' : '#f0ede6'" stroke="#2c5f8a" stroke-width="1.5" />
                 <rect x="4" y="4" width="32" height="32" fill="none" stroke="#2c5f8a" stroke-width="0.8" />
                 <polygon points="20,8 32,20 20,32 8,20" fill="none" stroke="#2c5f8a" stroke-width="0.8" />
                 <circle cx="4" cy="4" r="1.5" fill="#2c5f8a" />

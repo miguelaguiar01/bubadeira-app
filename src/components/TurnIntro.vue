@@ -18,13 +18,12 @@ defineEmits<{
     <div class="text-center animate-fade-up animate-fade-up-delay-1">
       <img src="/logo.png" alt="Bubadeira" class="w-16 h-16 mx-auto mb-2 object-contain" style="image-rendering: pixelated;" />
 
-
-      <p class="font-body text-tasca-dark/50 text-sm tracking-widest uppercase mb-2">
+      <p class="font-body text-tasca-dark/50 dark:text-tasca-cream/50 text-sm tracking-widest uppercase mb-2">
         {{ t('game.yourTurn') }}
       </p>
 
       <h2
-        class="font-display text-tasca-dark font-black stamp-text leading-none mb-8"
+        class="font-display text-tasca-dark dark:text-tasca-cream font-black stamp-text leading-none mb-8"
         style="font-size: clamp(2.5rem, 12vw, 4rem);"
       >
         {{ playerName }}
@@ -46,7 +45,7 @@ defineEmits<{
 
       <button
         @click="$emit('quit')"
-        class="mt-4 w-full font-body text-tasca-dark/40 text-sm py-2"
+        class="mt-4 w-full font-body text-tasca-dark/40 dark:text-tasca-cream/40 text-sm py-2"
       >
         {{ t('game.quit') }}
       </button>

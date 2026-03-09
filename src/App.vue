@@ -15,10 +15,6 @@ watch(() => settings.darkMode, (isDark) => {
   document.documentElement.classList.toggle('dark', isDark)
 }, { immediate: true })
 
-watch(() => settings.darkMode, (isDark) => {
-  console.log('dark mode changed:', isDark)
-  document.documentElement.classList.toggle('dark', isDark)
-}, { immediate: true })
 </script>
 
 <template>

@@ -36,7 +36,6 @@ function addPlayer() {
   error.value = ''
 }
 
-
 </script>
 
 <template>
@@ -47,7 +46,7 @@ function addPlayer() {
         :placeholder="t('lobby.playerNamePlaceholder')"
         maxlength="15"
         @keyup.enter="addPlayer"
-        class="w-full font-body bg-white border-2 border-tasca-dark/30 rounded-lg
+        class="w-full font-body bg-white dark:bg-[#d4c4a0] border-2 border-tasca-dark/30 dark:border-tasca-cream/20 rounded-lg
                px-4 py-3 text-tasca-dark placeholder-tasca-dark/30 font-semibold
                focus:outline-none focus:border-tasca-red transition-colors"
       />
@@ -58,7 +57,7 @@ function addPlayer() {
 
     <button
       @click="addPlayer"
-      class="w-full bg-white border-2 border-tasca-dark/30 rounded-lg py-3
+      class="w-full bg-white dark:bg-[#d4c4a0] border-2 border-tasca-dark/30 dark:border-tasca-cream/20 rounded-lg py-3
              font-display text-tasca-dark font-bold text-base tracking-wide
              active:bg-tasca-red active:text-white active:border-tasca-red
              transition-colors"

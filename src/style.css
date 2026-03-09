@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-tasca-paper: #f0ede6;
@@ -10,10 +11,35 @@
   --color-tasca-green: #2d6a4f;
   --color-tasca-wood: #3d2010;
   --color-tasca-amber: #c17f24;
+  --color-tasca-cream: #f5e6c8;
+  --color-tasca-wood-light: #2a1a0e;
+  --color-tasca-parchment: #d4c4a0;
 
 
   --font-display: "Playfair Display", serif;
   --font-body: "Lora", serif;
+}
+
+.dark .paper-texture {
+  background-color: #2a1a0e;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.015) 2px,
+    rgba(255, 255, 255, 0.015) 4px
+  ),
+  repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 8px,
+    rgba(0, 0, 0, 0.08) 8px,
+    rgba(0, 0, 0, 0.08) 9px
+  );
+}
+
+.dark .paper-texture::before {
+  display: none;
 }
 
 /* Embossed paper tablecloth texture */
