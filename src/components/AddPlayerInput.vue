@@ -8,15 +8,26 @@ const emit = defineEmits<{
   add: [name: string]
 }>()
 
+const props = defineProps<{
+  existingNames: string[]
+}>()
+
 const newPlayerName = ref('')
 const error = ref('')
 
 function addPlayer() {
   const name = newPlayerName.value.trim()
+  console.log('name:', name)
+  console.log('existingNames:', props.existingNames)
   if (!name) return
 
   if (name.length > 15) {
     error.value = t('lobby.errorTooLong')
+    return
+  }
+
+  if (props.existingNames.some(n => n.toLowerCase() === name.toLowerCase())) {
+    error.value = t('lobby.errorDuplicate')
     return
   }
 
@@ -25,11 +36,7 @@ function addPlayer() {
   error.value = ''
 }
 
-function setError(message: string) {
-  error.value = message
-}
 
-defineExpose({ setError })
 </script>
 
 <template>

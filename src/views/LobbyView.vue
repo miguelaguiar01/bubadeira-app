@@ -20,10 +20,6 @@ const players = ref<Player[]>([])
 const addPlayerInput = ref<InstanceType<typeof AddPlayerInput> | null>(null)
 
 function handleAdd(name: string) {
-  if (players.value.some(p => p.name.toLowerCase() === name.toLowerCase())) {
-    addPlayerInput.value?.setError(t('lobby.errorDuplicate'))
-    return
-  }
   players.value.push({ id: crypto.randomUUID(), name })
 }
 
@@ -65,7 +61,10 @@ function goBack() {
       />
 
       <!-- Add player input -->
-      <AddPlayerInput ref="addPlayerInput" @add="handleAdd" />
+      <AddPlayerInput
+        :existingNames="players.map(p => p.name)"
+        @add="handleAdd"
+      />
 
       <!-- Spacer -->
       <div class="flex-1" />
