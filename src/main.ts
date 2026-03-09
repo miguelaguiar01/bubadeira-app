@@ -12,4 +12,8 @@ app.use(createPinia())
 app.use(router)
 app.use(i18n)
 
+const { useSettingsStore } = await import('@/stores/settings')
+const settings = useSettingsStore()
+settings.load()
+
 app.mount('#app')

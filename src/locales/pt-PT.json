@@ -32,5 +32,18 @@
       "name": "Maior ou Menor",
       "description": "Adivinha se a próxima carta é maior ou menor. Erra e bebe!"
     }
+  },
+  "splash": {
+    "title": "Aviso",
+    "warning": "O consumo excessivo de álcool é perigoso para a saúde.",
+    "disclaimer": "A Bubadeira App não é responsável por eventuais consequências que possam decorrer durante o uso da mesma.",
+    "moderate": "Beba com moderação.",
+    "confirm": "Tenho mais de 18 anos",
+    "ageWarning": "Este site é destinado a maiores de 18 anos"
+  },
+  "settings": {
+    "title": "Definições",
+    "darkMode": "Modo escuro",
+    "language": "Idioma"
   }
 }

@@ -32,5 +32,18 @@
       "name": "Higher or Lower",
       "description": "Guess if the next card is higher or lower. Get it wrong and drink!"
     }
+  },
+  "splash": {
+    "title": "Disclaimer",
+    "warning": "Excessive alcohol consumption is dangerous to your health.",
+    "disclaimer": "The Bubadeira App is not responsible for any consequences that may arise from its use.",
+    "moderate": "Drink responsibly.",
+    "confirm": "I am over 18 years old",
+    "ageWarning": "This site is intended for users over 18 years old"
+  },
+  "settings": {
+    "title": "Settings",
+    "darkMode": "Dark mode",
+    "language": "Language"
   }
 }
