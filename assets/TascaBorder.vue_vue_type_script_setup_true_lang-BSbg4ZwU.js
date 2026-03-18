@@ -1,1 +1,0 @@
-import{A as o,S as a,Y as r,U as s,Q as n}from"./settings-DyrabFUa.js";const i=o({__name:"TascaBorder",props:{position:{}},setup(l){return(t,e)=>(n(),a("div",{class:r([l.position==="top"?"flex-col":"flex-col-reverse","flex"])},[...e[0]||(e[0]=[s("div",{class:"azulejo-border h-6 w-full"},null,-1),s("div",{class:"bg-tasca-red h-2 w-full"},null,-1)])],2))}});export{i as _};
